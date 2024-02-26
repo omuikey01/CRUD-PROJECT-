@@ -1,0 +1,56 @@
+nav {
+    width: 100vw;
+    background-color: black;
+    color: #fff;
+}
+.nav_Component {
+    width: 80vw;
+    justify-content: space-between;
+    margin: auto;
+   
+    height: 70px;
+    line-height: 70px;
+}
+.nav_Component .left .logo {
+    background-color: red;
+    border-radius: 50px;
+    padding: 10px;
+}
+.nav_Component .right ul {
+    gap:  20px;
+    text-transform: uppercase;
+}
+.nav_Component .right ul li a {
+    color: #fff;
+}
+
+
+.nav_bg_component {
+    height:  450px;
+}
+.nav_bg_ {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.nav_bg_ h1 {
+    color: #fff;
+    font-size: 40px;
+    margin: 10px;
+}
+.nav_bg_ h2 {
+    font-size: 25px;
+    color: #fff;
+
+}
+
+.nav_bg_ button {
+    background-color: red;
+    color: #fff;
+    padding: 15px;
+    margin-top: 40px;
+}

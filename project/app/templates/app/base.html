@@ -1,0 +1,28 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/style/style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/nav/nav.css' %}">
+
+</head>
+<body>
+    
+    <section id="Nav_bar" class="nav_bar" >
+        {% include "app/nav/nav.html" %}
+        {% include "app/nav/nav_bg.html" %}
+    </section>
+    <section id="Main_bar" class="main_bar" >
+        main
+    </section>
+    <section id="Footer_bar" class="footer_bar" >
+        footer
+    </section>
+
+</body>
+</html>
