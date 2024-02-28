@@ -29,3 +29,13 @@ button:hover{
     background-color: #fff;
     color: #000;
 }
+
+.footer_div_p_color {
+    color: red;
+}
+
+.w50px{
+    width: 50px;
+    margin: 0 10px;
+}
+

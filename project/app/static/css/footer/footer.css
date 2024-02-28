@@ -1,0 +1,48 @@
+.footer {
+    height: 70vh;
+    width: 100vw;
+    background-color: azure;
+}
+
+.footer_div1 {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px;
+}
+
+.footer_div2 {
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+
+.footer_div2 div {
+    margin: 20px;
+}
+
+.footer_div2 div img {
+    width: 50px;
+}
+
+.footer_div3 {
+    width: 100vw;
+}
+
+.footer_div3_a {
+    width: 80vw;
+    justify-content: space-between;
+    margin: auto;
+
+}
+.footer_div3_a .left{
+    margin: 0 20px;
+    
+}
+
+.footer_div3_a .left a {
+    color: #000;
+    margin: 0 20px;
+}
+
