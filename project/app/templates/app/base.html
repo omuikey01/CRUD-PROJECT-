@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{% static '/css/nav/nav.css' %}">
     <link rel="stylesheet" href="{% static '/css/footer/footer.css' %}">
     <link rel="stylesheet" href="{% static '/css/about/about.css' %}">
+    <link rel="stylesheet" href="{% static '/css/course/courses.css' %}">
+    <link rel="stylesheet" href="{% static '/css/auth/registration.css' %}">
 
 </head>
 <body>
@@ -22,11 +24,19 @@
     {% comment %} Nav Bar End {% endcomment %}
 
 
-
-    <section id="Main_bar" class="main_bar" >
-        main
+    <section>
+        {% include "app/Auth/regis.html" %}
+        {% include "app/Auth/login.html" %}
     </section>
 
+
+
+    <section id="Main_bar" class="main_bar" >
+    </section>
+    
+    <section class="Courses"  >
+        {% include "app/courses/courses.html" %}
+    </section>
 
     <section>
         {% include "app/about/about.html" %}
@@ -35,6 +45,9 @@
     <section id="Footer_bar" class="footer_bar" >
         {% include "app/footer/footer.html" %}
     </section>
+
+
+   
 
 </body>
 </html>

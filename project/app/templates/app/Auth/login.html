@@ -1,0 +1,17 @@
+<section class="login" style=" background-color: orange; "   >
+    <div>
+        <form action="{% url 'logindata' %}" class="form" method="post" >
+            {% csrf_token %}
+            <h1> Login </h1>
+            <h1 style="color : red;" > {{msgd}} </h1>
+            <label for=""> Email </label>
+            <input type="text" name="user" >
+            <label for=""> Password </label>
+            <input type="password" name="pass12" >
+           
+            <div class="btn" >
+                <button> Login </button>
+            </div>
+        </form>
+    </div>
+</section>

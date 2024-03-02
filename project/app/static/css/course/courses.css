@@ -1,0 +1,50 @@
+.Courses{
+    height:  500px;
+    width: 100vw;
+}
+.courses_data h1{
+    text-align: center;
+}
+
+.courses_data .cards .card {
+    height: 250px;
+    width: 250px;
+    background-color :azure;
+    margin: 50px;
+    border-radius: 10px;
+    transition: all 200ms;
+}
+
+.courses_data .cards .card:hover{
+    height: 260px;
+    width: 260px;
+    transition: all 200ms;
+}
+
+.courses_data .cards .card .card_img {
+    text-align: center;
+}
+
+.courses_data .cards .card .card_img img {
+    height: 50%;
+    width: 100%;
+    margin: auto;
+}
+
+.courses_data .cards .card h1 {
+    text-align: left;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.courses_data .cards .card .card_less_fees {
+    justify-content: space-between;
+    margin: 0 10px;
+    font-size: 18px;
+}
+.courses_data .cards .card .card_less_fees .fees {
+    background-color: green;
+    padding: 5px;
+    color: #fff;
+
+}
