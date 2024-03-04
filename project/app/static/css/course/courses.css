@@ -48,3 +48,11 @@
     color: #fff;
 
 }
+
+
+.course-add {
+    width: 700px;
+}
+.course-add input {
+    width: 500px;
+}

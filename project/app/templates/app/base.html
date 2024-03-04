@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{% static '/css/about/about.css' %}">
     <link rel="stylesheet" href="{% static '/css/course/courses.css' %}">
     <link rel="stylesheet" href="{% static '/css/auth/registration.css' %}">
-
+    <link rel="stylesheet" href="{% static '/css/auth/dash.css' %}">
 </head>
 <body>
     {% comment %} Nav Bar Start {% endcomment %}
@@ -23,17 +23,14 @@
     </section>
     {% comment %} Nav Bar End {% endcomment %}
 
+    {% block SomeData %}
 
-    <section>
-        {% include "app/Auth/regis.html" %}
-        {% include "app/Auth/login.html" %}
-    </section>
-
+    {% endblock  %}
 
 
     <section id="Main_bar" class="main_bar" >
+        {% include "app/Auth/dash.html" %}
     </section>
-    
     <section class="Courses"  >
         {% include "app/courses/courses.html" %}
     </section>

@@ -8,7 +8,44 @@
 </head>
 
 <body>
-    <h1> Desh Board </h1>
+    <section class="desh_board" >
+        <div>
+
+            <h1> Desh Board </h1>
+            <form action="{% url 'form_show' %}" method="post">
+                {% csrf_token %}
+                <button name="form_show_admin" value="add_course" > Add Course </button>
+                <button name="form_show_admin" value="show_course" > Show Courses </button>
+
+            </form>
+        </div>
+
+{% if courses_work == "add" %}
+        <div>
+            <section class="login" >
+                <div>
+                    <form action="{% url 'courseadd' %}" class="form course-add " method="post" enctype="multipart/form-data" >
+                        {% csrf_token %}
+                        <h1> Add Course </h1>
+                        <h1 style="color : red;" > {{msgd}} </h1>
+                            {{add_c}}
+                        <div class="btn" >
+                            <button> Course </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+
+        {% endif %}
+
+{% if courses_work == "show" %}
+        Show Course 
+{% endif %}
+
+
+    </section>
 </body>
 
 </html>

@@ -1,16 +1,19 @@
-{% load static %}
 <nav>
     <div class="flex nav_Component">
         <div class="left">
             <span class="logo"> MY </span> <span> SirG.Com </span> <span> Premium </span>
         </div>
         <div class="right">
-            <ul class="flex" >
-                <li> <a href="#">courses</a> </li>
-                <li> <a href="#">features</a> </li>
-                <li> <a href="#">about us </a> </li>
-                <li> <a href="#">login</a> </li>
-            </ul>
+            <form action="{% url 'callfun' %}" method="post" >
+                {% csrf_token %}
+                <ul class="flex">
+                    <button name="btn_nav" value="course" > courses </button>
+                    <button name="btn_nav" value="feature" > features </button>
+                    <button name="btn_nav" value="about_us" > about us </button>
+                    <button name="btn_nav" value="login" > Login </button>
+                </ul>
+                
+            </form>
         </div>
     </div>
 </nav>

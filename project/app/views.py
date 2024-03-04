@@ -1,8 +1,18 @@
 from django.shortcuts import render
 from .models import *
+from .forms import *
+
+
 
 def homepage(request):
     return render(request, "app/base.html")
+
+def callfunpage(request):
+    if request.method == "POST":
+        value = request.POST['btn_nav']
+        if value == "login":
+            return render (request, "app/Auth/login.html")
+        
 
 def registerpage(request):
     if request.method == 'POST':
@@ -33,3 +43,36 @@ def loginpage(request):
             return render(request, "app/base.html", { "msgd" : "Username and paswword not matched"})
     else :
         return render(request, "app/base.html", {"msg" : "Invalid User"})
+
+
+
+def form_showpage(request):
+    if request.method == "POST":
+        name = request.POST['form_show_admin']
+        if name == "add_course" :
+            form_couese = CoursesForm()
+            return render(request, "app/base.html",{"courses_work" : "add", "add_c" : form_couese})
+        
+        elif name == "show_course":
+            return render(request, "app/base.html",{"courses_work" : "show"})
+
+
+
+
+def courseaddpage(request):
+    if request.method == 'POST':
+
+        title = request.POST['title']
+        lession = request.POST['lession']
+        fees = request.POST['fees']
+
+        Course.objects.create(course_title = title, course_lession = lession, course_fees = fees)
+        
+        return render(request, "app/base.html",{"msgd" : "Course Successfully Added "})
+
+    else :
+        return render(request, "app/base.html", {"msgd" : "Not Added Course"})
+        
+
+
+    
