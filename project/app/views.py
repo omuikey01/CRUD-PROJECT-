@@ -5,9 +5,11 @@ from .forms import *
 
 
 def homepage(request):
-    return render(request, "app/base.html")
+    data = Course.objects.all()
+    return render(request, "app/base.html" , {"data" : data})
 
 def callfunpage(request):
+    
     if request.method == "POST":
         value = request.POST['btn_nav']
         if value == "login":
@@ -57,22 +59,16 @@ def form_showpage(request):
             return render(request, "app/base.html",{"courses_work" : "show"})
 
 
-
-
 def courseaddpage(request):
     if request.method == 'POST':
-
-        title = request.POST['title']
-        lession = request.POST['lession']
-        fees = request.POST['fees']
-
-        Course.objects.create(course_title = title, course_lession = lession, course_fees = fees)
+        form = CoursesForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        else:
+            return render(request, "app/base.html",{"msgd" : "Course Not Added "})
         
         return render(request, "app/base.html",{"msgd" : "Course Successfully Added "})
 
     else :
         return render(request, "app/base.html", {"msgd" : "Not Added Course"})
-        
-
-
     

@@ -23,10 +23,12 @@
 
 .courses_data .cards .card .card_img {
     text-align: center;
+    height: 130px;
+    width: 260px;
 }
 
 .courses_data .cards .card .card_img img {
-    height: 50%;
+    height: 90%;
     width: 100%;
     margin: auto;
 }
